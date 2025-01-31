@@ -1,7 +1,9 @@
 /* Reset básico */
-body {
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f4f4f4;
@@ -45,16 +47,19 @@ nav a:hover {
 
 /* Hero section ajustado */
 .hero-section {
+    height: 100vh;
+    width: 100%;
     background-image: url('\\imagenes\\WhatsApp Image 2025-01-30 at 04.07.25.jpeg');
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    background-repeat: no-repeat;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    position: relative;
-    margin-bottom: -50px;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
 .hero-section::before {
@@ -68,11 +73,11 @@ nav a:hover {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+    text-align: center;
     color: white;
-    padding: 2rem;
-    padding-bottom: 100px; /* Más espacio abajo */
+    z-index: 2;
+    padding: 0;
+    margin: 0;
 }
 
 .hero-content h1 {
@@ -90,6 +95,8 @@ nav a:hover {
 
 /* About Section */
 .about-section {
+    margin-top: 0;
+    padding-top: 50px;
     padding: 40px 20px;
     text-align: center;
     background-color: #fff;
@@ -711,4 +718,10 @@ section {
 
 #contacto button:hover {
     background-color: #003d82;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }

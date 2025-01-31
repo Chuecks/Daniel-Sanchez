@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 async function enviarEmail(contenido) {
     const mailOptions = {
         from: process.env.GMAIL_USER,          // Tu Gmail
-        to: 'danysol99@hotmail.com',       // El Outlook de tu padre
+        to: 'juanma1752003@gmail.com',       // El  de tu padre
         subject: `Nuevo mensaje de ${contenido.nombre}`,
         html: `
             <h2>Has recibido un nuevo mensaje</h2>
