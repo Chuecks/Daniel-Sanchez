@@ -1,0 +1,714 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding-top: 0; /* El padding lo maneja el hero-section */
+}
+
+h1, h2, .navbar-nav {
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Menú fijo */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 30, 44);
+    padding: 15px 0;
+    position: fixed !important;
+    width: 100%;
+    z-index: 9999;
+    border-bottom: 2px solid #ff0000;
+}
+
+nav a {
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+/* Hero section ajustado */
+.hero-section {
+    background-image: url('\\imagenes\\WhatsApp Image 2025-01-30 at 04.07.25.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: -50px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay para mejor legibilidad */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 2rem;
+    padding-bottom: 100px; /* Más espacio abajo */
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* About Section */
+.about-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: #f5f5f5;
+    padding: 4rem 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: #1a2634;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.quote-section blockquote footer {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #8b0000;
+    font-style: normal;
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.map-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+#worldMap {
+    height: 700px;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Debe ser igual a la altura de tu navbar */
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 18px;
+    font-family: 'Georgia', serif;  /* Fuente original */
+    margin: 0 20px;
+    transition: color 0.3s ease;
+    opacity: 0.8;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.nav-logo h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links li:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    background-color: #8b0000;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
+    
+    .nav-logo {
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .nav-links a {
+        padding: 0.8rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Estilos para el modal */
+.modal-historia {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-texto {
+    line-height: 1.8;
+    margin: 1rem 0;
+    white-space: pre-line;
+}
+
+.modal-contenido button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Ajustes de sección */
+section {
+    padding: 80px 20px; /* Añade espacio arriba para compensar la navbar fija */
+    margin-top: -60px; /* Ajusta según la altura de tu navbar */
+    padding-top: 60px;
+}
+
+#inicio {
+    padding-top: 80px;
+}
+
+/* Modal para detalles de foto */
+.foto-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.foto-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+
+.foto-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.foto-modal img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para las historias */
+.historia-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.historia-contenido h3 {
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    font-size: 1.8rem;
+}
+
+.historia-metadata {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.historia-descripcion {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.leer-mas {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.leer-mas:hover {
+    background-color: #660000;
+}
+
+/* Estilos para el modal de historia completa */
+.historia-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.historia-modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.historia-modal-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+
+.historia-modal-close {
+    float: right;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.seccion-contacto {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.seccion-contacto h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.formulario-contacto {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.formulario-contacto button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formulario-contacto button:hover {
+    background-color: #0056b3;
+}
+
+.clase {
+    background-image: url('/imagenes/WhatsApp Image 2025-01-30 at 04.07.25.jpeg');
+}
+
+/* Estilos para la barra de navegación */
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;  /* Volvemos a la fuente original */
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff4d4d !important;
+}
+
+/* Sección Sobre Mí */
+#sobre-mi {
+    padding-top: 50px;
+    margin-top: -30px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+#sobre-mi h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+/* Sección Países Visitados */
+#paises {
+    padding-top: 60px; /* Más espacio arriba para el título */
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+#paises h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+    padding-top: 20px;
+}
+
+/* Bajamos la descripción y el mapa */
+#paises p {
+    text-align: center;
+    margin-top: 40px; /* Espacio después del título */
+    margin-bottom: 30px; /* Espacio antes del mapa */
+    padding: 0 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Contenedor del mapa */
+#paises .map-container {
+    margin-top: 30px; /* Espacio después de la descripción */
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para títulos de sección */
+.section-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #003d82;
+}
+
+#contacto {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Georgia', serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contacto button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#contacto button:hover {
+    background-color: #003d82;
+}
